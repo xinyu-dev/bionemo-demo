@@ -6,6 +6,3 @@ url: https://xinyu-dev.github.io/bionemo-demo
 
 aux_links:
   Template Repository: https://github.com/xinyu-dev/bionemo-demo
-
-plugins:
-  - jekyll-default-layout
