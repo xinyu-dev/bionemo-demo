@@ -4,6 +4,8 @@ theme: just-the-docs
 
 url: https://xinyu-dev.github.io/bionemo-demo
 
+baseurl: /bionemo-demo
+
 aux_links:
   Template Repository: https://github.com/xinyu-dev/bionemo-demo
 
