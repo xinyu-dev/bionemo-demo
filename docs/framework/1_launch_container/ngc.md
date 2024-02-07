@@ -60,10 +60,7 @@ Please contact NVIDIA team for NGC access & credentials
    - `--order`: order of the job. Just set it to 1 for now
    - `--label`: Change to your job label. This allows quick filter on NGC dashboard
    - `--commandline`: command to run inside the container. In this case, we start JupyterLab and keep it running with `sleep infinity`
-2. Go to [NGC dashboard](https://bc.ngc.nvidia.com/jobs). Click into your job. 
-   ![ngc-dashboard](/assets/images/ngc-dashboard.jpg)
-3. Wait until the status shows `Running` for 3 minutes. Then click on the link to access JupyterLab.
-   ![ngc-job](/assets/images/ngc-job.jpg)
-   The result looks like this: 
-   ![ngc-jupyterlab](/assets/images/ngc-jupyterlab.jpg)
+2. Go to [NGC dashboard](https://bc.ngc.nvidia.com/jobs). Click into your job. ![ngc-dashboard]({{ "/assets/images/ngc-dashboard.jpg" | prepend: site.baseurl }})
+3. Wait until the status shows `Running` for 3 minutes. Then click on the link to access JupyterLab. ![ngc-job]({{ "/assets/images/ngc-job.jpg" | prepend: site.baseurl }})
+   The result looks like this: ![ngc-jupyterlab]({{ "/assets/images/ngc-jupyterlab.jpg" | prepend: site.baseurl }})
 
