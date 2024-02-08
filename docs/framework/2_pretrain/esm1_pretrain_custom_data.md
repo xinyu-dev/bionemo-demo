@@ -20,7 +20,7 @@ grand_parent: BioNeMo Framework
 {% include template/protein_mlm_objective.md %}
 
 ## Prerequisites
-Completes Step 1. Make sure you have Jupyter notebook launched. 
+Complete Step 1. Make sure you have Jupyter notebook launched. 
 
 
 ## Step 1. Prepare clean training data
@@ -166,7 +166,7 @@ python examples/protein/esm1nv/pretrain.py \
 
 ## Extras
 
-### A small example
+### An example
 In here we have the clean training data in `examples/tests/test_data/protein` and the validation-in-the-loop data in `examples/tests/test_data/protein/downstream` (for the 3-state structure prediction task).
 We could simply run the following command to start training. 
 

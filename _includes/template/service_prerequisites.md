@@ -1,0 +1,1 @@
+A valid NGC API key that has access to BioNeMo service. 

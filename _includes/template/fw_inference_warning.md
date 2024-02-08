@@ -1,0 +1,1 @@
+For faster inference speed and larger inference workloads, use the model in BioNeMo API
