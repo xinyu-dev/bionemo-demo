@@ -18,17 +18,9 @@ grand_parent: BioNeMo Framework
 ## Prerequisites
 
 {: .note }
-Please contact NVIDIA team for NGC access & credentials
+A valid ACE is required to run compute on NGC. Please contact NVIDIA team for NGC access & credentials
 
-1. Create an account on [NGC](https://bc.ngc.nvidia.com/jobs) where you can access clusters and launch training jobs. 
-2. Get a NGC API key from [here](https://ngc.nvidia.com/setup/api-key)
-2. Install NGC CLI from [here](https://ngc.nvidia.com/setup/installers/cli)
-3. Open a terminal from your local machine, run `ngc config set`
-   4. `API key`: enter API key, 
-   5. `CLI output`: accept default (ascii) by pressing `Enter`
-   6. `org`: Enter the NGC org you're assigned with
-   7. `team`: Enter the NGC team you're assigned with
-   8. `ace`: choose a ACE (if any), otherwise press `Enter`
+{% include template/ngc_api.md %}
 
 ## Steps
 1. Open a terminal on your local machine, run the following command
@@ -62,5 +54,17 @@ Please contact NVIDIA team for NGC access & credentials
    - `--commandline`: command to run inside the container. In this case, we start JupyterLab and keep it running with `sleep infinity`
 2. Go to [NGC dashboard](https://bc.ngc.nvidia.com/jobs). Click into your job. ![ngc-dashboard]({{ "/assets/images/ngc-dashboard.jpg" | prepend: site.baseurl }})
 3. Wait until the status shows `Running` for 3 minutes. Then click on the link to access JupyterLab. ![ngc-job]({{ "/assets/images/ngc-job.jpg" | prepend: site.baseurl }})
-   The result looks like this: ![ngc-jupyterlab]({{ "/assets/images/ngc-jupyterlab.jpg" | prepend: site.baseurl }})
+4. To download the pretrained model weights, open a terminal in JupyterLab, and run
+```shell
+cd /workspace/bionemo
+./launch.sh download
+```
+This will create a `models` folder. 
+5. Optionally, persist the models by copying them to your workspace
+```shell
+cp -r models xyu-workspace1/bionemo/models
+```
+Next time, when you launch the container, you can mount the `models` folder to the container under the `/workspace/bionemo` directory.
+6. The final directory structure should look like this:
+![ngc-jupyterlab]({{ "/assets/images/ngc-jupyterlab.jpg" | prepend: site.baseurl }})
 

@@ -1,0 +1,1 @@
+This demo shows how to pretrain protein language model on mask language objective. During training, a protein sequence is provided to the model, and some amino acids are randomly masked. The model is trained to predict the masked amino acids.
