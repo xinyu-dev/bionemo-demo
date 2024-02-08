@@ -39,5 +39,5 @@ downstream_task:
 ```
 The `dataset_path` does not matter
 4. Go back to the `inference_interactive.ipynb` and run the cells.
-   - **Sequence to hidden states**: this generates per token embeddings
-   - **Sequence to embedding**: this generates per sequence embeddings
+   - **Sequence to hidden states**: this generates per token embedding
+   - **Sequence to embedding**: this generates per sequence embedding

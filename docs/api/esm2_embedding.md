@@ -17,3 +17,4 @@ parent: BioNeMo API
 {% include template/service_prerequisites.md %}
 
 ## Steps
+See [example notebook](https://github.com/xinyu-dev/bionemo-demo/blob/main/notebooks/zero_shot_protein_design.ipynb) 
