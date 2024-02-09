@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Zero-shot Protein Design
-nav_order: 1
 parent: Recipes
 ---
 # ESM2nv Inference

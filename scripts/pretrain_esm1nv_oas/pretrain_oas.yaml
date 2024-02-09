@@ -1,0 +1,39 @@
+defaults:
+  - base_config
+restore_from_path: null # used when starting from a .nemo file
+
+name: esm1nv-oas # Add OAS to the name
+do_training: True # Set to False for preprocessing or True for training
+exp_manager:
+  create_wandb_logger: False # Disable Weights and Biases logger for demo
+
+trainer:
+  devices: 1 # number of GPUs or CPUs
+  num_nodes: 1
+  max_steps: 10000 # consumed_samples = global_step * micro_batch_size * data_parallel_size * accumulate_grad_batches
+  val_check_interval: 100 # number of steps between validation dataset is evaluated. This is important because the "top K" model saved is based on the val loss.
+
+model:
+  tokenizer:
+    library: 'sentencepiece'
+    type: null
+    model: ${oc.env:BIONEMO_HOME}/tokenizers/protein/esm1nv/vocab/protein_sequence_sentencepiece.model
+    vocab_file: ${oc.env:BIONEMO_HOME}/tokenizers/vocab/protein_sequence_sentencepiece.vocab
+  data:
+    dataset_path: /workspace/bionemo/data/OASpaired/processed/heavy # parent directory for data, contains train / val / test folders. Needs to be writeable for index creation.
+    dataset: # inclusive range of data files to load x[000..049] or can a single file, e.g. x000
+      train: x[000..005] # change to number of files in train folder. Using 005 for demo purpose only
+      test: x[000..001]
+      val: x[000..001]
+    micro_batch_size: ${model.micro_batch_size}
+    num_workers: 10
+    # Supported kwargs (with default values):
+    #     text_mmap (newline_int=10, header_lines=0, workers=None, sort_dataset_paths=True)
+    #     csv_mmap (newline_int=10, header_lines=0,workers=None, sort_dataset_paths=True, data_col=1, data_sep=",")
+    data_impl_kwargs:
+      csv_mmap:
+        data_col: 1 # 0-based. Index for the column in the x000.csv file that has the protein sequence
+    modify_percent: 0.1 # Percentage of characters in a protein sequence to modify. (Modification means replacing with another amino acid or with a mask token)
+    perturb_percent: 0.5 # Of the modify_percent, what percentage of characters are to be replaced with another amino acid.
+  dwnstr_task_validation:
+    enabled: False # set to False
