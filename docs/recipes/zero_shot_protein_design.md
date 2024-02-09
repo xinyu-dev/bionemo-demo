@@ -3,7 +3,7 @@ layout: default
 title: Zero-shot Protein Design
 parent: Recipes
 ---
-# ESM2nv Inference
+# Zero-shot Protein Design
 
 ## Table of contents
 {: .no_toc .text-delta }
