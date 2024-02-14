@@ -45,7 +45,7 @@ grand_parent: BioNeMo Framework
 ![choose network]({{"/assets/images/ec2-network-settings.jpg" | prepend: site.baseurl}})
 11. Keep other settings default (or change them as needed). 
       > {: .note }
-    At least 100G root EBS volume is recommended as in the default setting for pretrained models & datasets.
+    At least 124G root EBS volume is recommended as shown in the default setting for pretrained models & datasets.
 12. Click on **Launch Instance**. Wait until the `Instance State` becomes `running`.
 
 
