@@ -54,17 +54,17 @@ A valid ACE is required to run compute on NGC. Please contact NVIDIA team for NG
    - `--commandline`: command to run inside the container. In this case, we start JupyterLab and keep it running with `sleep infinity`
 2. Go to [NGC dashboard](https://bc.ngc.nvidia.com/jobs). Click into your job. ![ngc-dashboard]({{ "/assets/images/ngc-dashboard.jpg" | prepend: site.baseurl }})
 3. Wait until the status shows `Running` for 3 minutes. Then click on the link to access JupyterLab. ![ngc-job]({{ "/assets/images/ngc-job.jpg" | prepend: site.baseurl }})
-4. To download the pretrained model weights, open a terminal in JupyterLab, and run
+4. In the terminal, run the `ngc config set` again to set the NGC credentials inside the container. 
+5. To download the pretrained model weights, open a terminal in JupyterLab, and run
 ```shell
 cd /workspace/bionemo
 ./launch.sh download
 ```
-This will create a `models` folder. 
+This will create a `models` folder.
 5. Optionally, persist the models by copying them to your workspace
 ```shell
 cp -r models xyu-workspace1/bionemo/models
 ```
-Next time, when you launch the container, you can mount the `models` folder to the container under the `/workspace/bionemo` directory.
 6. The final directory structure should look like this:
 ![ngc-jupyterlab]({{ "/assets/images/ngc-jupyterlab.jpg" | prepend: site.baseurl }})
 

@@ -92,7 +92,7 @@ docker run --rm -d --gpus all -p 8888:8888 -v /home/ubuntu/xyu-workspace1:/works
    - The `/workspace/bionemo` is the directory inside the container that contains the example and code. I prefer to use it as my home directory when working inside the container. Mount your local folders to this directory by changing the path in `-v` tag. 
 3. You can now access JupyterLab by visitn `localhost:8888` in your web browser.
 4. To download the pretrained model weights, open a terminal in JupyterLab. 
-5. In the terminal, run the `ngc config set` again to set the NGC credentials. 
+5. In the terminal, run the `ngc config set` again to set the NGC credentials inside the container. 
 5. Then run
 ```shell
 cd /workspace/bionemo
