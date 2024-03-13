@@ -96,9 +96,9 @@ docker run --rm -d --gpus all -p 8888:8888 -v /home/ubuntu/xyu-workspace1:/works
 5. Then run
 ```shell
 cd /workspace/bionemo
-python download_models.py all --source ngc --download_dir ${BIONEMO_HOME} --verbose
-```
+python download_models.py all --source ngc --download_dir ${BIONEMO_HOME}/models --verbose
 This will create download the models to `/workspace/bionemo/models` folder. 
+```
 6. Optionally, persist the models by copying them to your workspace
 ```shell
 cp -r models xyu-workspace1/bionemo/models

@@ -58,7 +58,7 @@ A valid ACE is required to run compute on NGC. Please contact NVIDIA team for NG
 5. To download the pretrained model weights, open a terminal in JupyterLab, and run
 ```shell
 cd /workspace/bionemo
-python download_models.py all --source ngc --download_dir ${BIONEMO_HOME} --verbose
+python download_models.py all --source ngc --download_dir ${BIONEMO_HOME}/models --verbose
 ```
 This will download models to `/workspace/bionemo/models` folder.
 5. Optionally, persist the models by copying them to your workspace
