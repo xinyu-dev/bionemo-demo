@@ -114,4 +114,4 @@ Next time, when you launch the container, you can mount the `models` folder to t
 
 
 ## Footnotes
-[^1]: We recommend [A100 (p4 instances)](https://aws.amazon.com/ec2/instance-types/p4/) for training in BioNeMo. However, these instances might be challenging to launch on demand. For this demo we will use [V100 (p3dn.24xlarge)](https://aws.amazon.com/ec2/instance-types/p3/#:~:text=Amazon%20EC2%20P3%20instance%20product%20details) instead. Note that this instance might only be available in certain AWS regions (e.g. us-east-1). Some BioNeMo features might not be fully supported on V100. Other instance types (e.g. g4dn, g5) could potentially be used, but we have not tested.
+[^1]: We recommend [A100 (p4 instances)](https://aws.amazon.com/ec2/instance-types/p4/) for training in BioNeMo. However, these instances might be challenging to launch on demand. For this demo we will use [V100 (p3dn.24xlarge)](https://aws.amazon.com/ec2/instance-types/p3/#:~:text=Amazon%20EC2%20P3%20instance%20product%20details) instead, but other instances (e.g. G5) could also be used. 
