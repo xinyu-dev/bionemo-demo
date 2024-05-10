@@ -30,7 +30,7 @@ A valid ACE is required to run compute on NGC. Please contact NVIDIA team for NG
      --team internal-sandbox \
      --ace sa-nvex-iad2-ace \
      --instance dgxa100.80g.1.norm \
-     --image nvcr.io/nvidia/clara/bionemo-framework:1.2 \
+     --image nvcr.io/nvidia/clara/bionemo-framework:1.4 \
      --port 8888 \
      --workspace xyu-workspace1:/workspace/bionemo/xyu-workspace1:RW \
      --result /result \
@@ -54,7 +54,7 @@ A valid ACE is required to run compute on NGC. Please contact NVIDIA team for NG
    - `--commandline`: command to run inside the container. In this case, we start JupyterLab and keep it running with `sleep infinity`
 2. Go to [NGC dashboard](https://bc.ngc.nvidia.com/jobs). Click into your job. ![ngc-dashboard]({{ "/assets/images/ngc-dashboard.jpg" | prepend: site.baseurl }})
 3. Wait until the status shows `Running` for 3 minutes. Then click on the link to access JupyterLab. ![ngc-job]({{ "/assets/images/ngc-job.jpg" | prepend: site.baseurl }})
-4. In the terminal, run the `ngc config set` again to set the NGC credentials inside the container. 
+4. In the terminal, run the `ngc config set` again to set the NGC credentials inside the container. If NGC is not installed, go to [this page](https://org.ngc.nvidia.com/setup/installers/cli) to install it.
 5. To download the pretrained model weights, open a terminal in JupyterLab, and run
 ```shell
 cd /workspace/bionemo

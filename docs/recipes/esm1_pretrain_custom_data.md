@@ -2,8 +2,7 @@
 layout: default
 title: Pretrain ESM1nv with custom data
 nav_order: 3
-parent: Step 2. Pretrain
-grand_parent: BioNeMo Framework
+parent: Recipes
 ---
 
 # Pretraining ESM1nv with custom data

@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Train ESM1nv on OAS
-nav_order: 3
+title: Pretrain ESM1nv with OAS
 parent: Recipes
 ---
 # Train ESM1nv on OAS
@@ -18,7 +17,7 @@ We will use the paired sequence from OAS dataset (~ 2 M) to train a ESM1nv model
 
 
 ## Prerequisites
-Complete [Step 1 in BiNeMo Framework]({{ "/docs/framework/1_launch_container" | prepend: site.baseurl }})
+Complete [Step 1 in BioNeMo Framework]({{ "/docs/framework/1_launch_container" | prepend: site.baseurl }})
 
 ## Steps
 
@@ -66,6 +65,8 @@ The clean file looks like this
 1. In `pretrain_oas.yaml` file, set `do_training: True` activate training mode. Make sure the dataset path, train, test, val file path, and data_col is properly set
 ```yaml
 	do_training: True
+	exp_manager:
+	  create_wandb_logger: True # Enable Weights and Biases for logging
 	data:  
 	  dataset_path: /workspace/bionemo/data/OASpaired/processed/heavy # parent directory for data, contains train / val / test folders. Needs to be writeable for index creation.  
 	  dataset: # inclusive range of data files to load x[000..049] or can a single file, e.g. x000  
@@ -84,4 +85,5 @@ Then
 ```shell
 python examples/protein/esm1nv/pretrain_oas.py
 ```
+When asked about Weights and Biases, select option 2 to use your existing WandB account, then enter your WandB API key. If you prefer not to use WandB, select option 3, or set `create_wandb_logger: False` in the YAML file.
 3. The results will be saved in `/workspace/bionemo/results` folder.

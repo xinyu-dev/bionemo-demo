@@ -74,7 +74,7 @@ ngc config set
    8. `ace`: Enter the `ace` and press `Enter`
 9. Pull the BioNeMo container image from NGC. 
 ```shell
-docker pull nvcr.io/nvidia/clara/bionemo-framework:1.2
+docker pull nvcr.io/nvidia/clara/bionemo-framework:1.4
 ```
 
 ### Step 4. Run the BioNeMo container
