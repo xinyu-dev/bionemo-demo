@@ -23,4 +23,4 @@ Below is a screenshot using lysozyme as an example. The original sequence is sho
 ![image]({{ "/assets/images/notebook_lysozyme_zero_shot.png" | prepend: site.baseurl }})
 
 ## Steps
-See [example notebook](https://github.com/xinyu-dev/bionemo-demo/blob/main/notebooks/zero_shot_protein_design.ipynb)
+Refer to [this notebook]({{ "/notebooks/esm2nv/zero_shot_protein_design.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }})
