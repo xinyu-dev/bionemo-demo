@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Zero-shot Protein Design
-parent: Recipes
+parent: ESM2
+grand_parent: Recipes
 ---
 # Zero-shot Protein Design
 

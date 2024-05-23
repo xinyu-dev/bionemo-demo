@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Pretrain ESM1nv with OAS
-parent: Recipes
+parent: ESM1
+grand_parent: Recipes
 ---
-# Train ESM1nv on OAS
+# Pretraining ESM1nv on OAS
 
 ## Table of contents
 {: .no_toc .text-delta }

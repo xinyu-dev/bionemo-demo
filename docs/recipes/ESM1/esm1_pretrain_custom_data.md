@@ -2,7 +2,8 @@
 layout: default
 title: Pretrain ESM1nv with custom data
 nav_order: 3
-parent: Recipes
+parent: ESM1
+grand_parent: Recipes
 ---
 
 # Pretraining ESM1nv with custom data
