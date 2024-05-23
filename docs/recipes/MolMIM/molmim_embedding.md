@@ -24,7 +24,7 @@ There are 2 ways to generate embeddings using MolMIM:
 2. through triton server. 
 
 ### Method 1. Interactive Inference
-1. Download [this notebook]({{ "/notebooks/MolMIM/inference_interactive.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }}). Save it under `examples/molecule/molmim/nbs/` in the Jupyter Lab environment.
+1. Download [this notebook]({{ "/notebooks/molmim/inference_interactive.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }}). Save it under `examples/molecule/molmim/nbs/` in the Jupyter Lab environment.
 2. Run the notebook. 
 
 ### Method 2. Triton Server
@@ -39,7 +39,7 @@ There are 2 ways to generate embeddings using MolMIM:
 	- `--config-path` is the path to the folder containing the `YAML` config file.
 	- `--config-name` is the name of the `YAML` config file inside the `--config-path` folder.
 
-3. Download [this notebook]({{ "/notebooks/MolMIM/inference.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }}). Save it under `examples/molecule/molmim/nbs/` in the Jupyter Lab environment.
+3. Download [this notebook]({{ "/notebooks/molmim/inference.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }}). Save it under `examples/molecule/molmim/nbs/` in the Jupyter Lab environment.
 4. Run the notebook.
 
 ## Notes
@@ -108,4 +108,4 @@ for n in range(N):
     assert np.mean(np.diag(cosine_similarity(test1.reshape(-1, 1), result.reshape(-1, 1)))) == 1
 ```
 
-To try it out,  refer to [this notebook]({{ "/notebooks/MolMIM/molmim_embedding_consistency.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }})
+To try it out,  refer to [this notebook]({{ "/notebooks/molmim/molmim_embedding_consistency.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }})
