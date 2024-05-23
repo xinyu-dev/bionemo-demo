@@ -108,4 +108,4 @@ for n in range(N):
     assert np.mean(np.diag(cosine_similarity(test1.reshape(-1, 1), result.reshape(-1, 1)))) == 1
 ```
 
-To try it out on your own, refer to [this notebook]({{ "/notebooks/MolMIM/molmim_embedding_consistency.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }})
+To try it out,  refer to [this notebook]({{ "/notebooks/MolMIM/molmim_embedding_consistency.ipynb" | prepend: 'https://github.com/xinyu-dev/bionemo-demo/blob/main' }})
