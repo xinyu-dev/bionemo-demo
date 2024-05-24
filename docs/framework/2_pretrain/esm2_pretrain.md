@@ -45,16 +45,14 @@ cd /workspace/bionemo
 then
 ```shell
 python examples/protein/esm2nv/pretrain.py \
-  --config-path=conf \
-  --config-name=pretrain_esm2_650M \
-  ++do_training=False \
-  ++model.data.val_size=500 \
-  ++model.data.test_size=100 \
-  ++model.data.uf50_datapath=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200/uniref50_train_filt.fasta \
-  ++model.data.uf90_datapath=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200/ur90_ur50_sampler.fasta \
-  ++model.data.cluster_mapping_tsv=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200/mapping.tsv \
-  ++model.data.dataset_path=/workspace/bionemo/examples/tests/test_data/uf50 \
-  ++model.data.uf90.uniref90_path=/workspace/bionemo/examples/tests/test_data/uf90
+--config-path=conf \
+++do_training=False \
+++model.data.val_size=500 \
+++model.data.test_size=100 \
+++model.data.train.uf50_datapath=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200/uniref50_train_filt.fasta \
+++model.data.train.uf90_datapath=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200/ur90_ur50_sampler.fasta \
+++model.data.train.cluster_mapping_tsv=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200/mapping.tsv \
+++model.data.dataset_path=/workspace/bionemo/examples/tests/test_data/uniref202104_esm2_qc_test200_val200
 ```
     **Parameters starting with `--`** are passed to `pretrain.py` as command line arguments. For example: 
     - `config-path` and `config-name`: specify the folder and yaml file name for the configuration YAML file. This path is relative to `pretrain.py`. The `conf` refers to `examples/protein/esm2nv/conf` and `pretrain_esm2_650M` refers to `examples/protein/esm2nv/conf/pretrain_esm2_650M.yaml`.
@@ -62,15 +60,15 @@ python examples/protein/esm2nv/pretrain.py \
     **Parameters starting with `++`** are configurable in the YAML file. For example, in `pretrain_esm2_650M.yaml`, which inherits from `base_config.yaml`, you can find these parameters: 
     - `do_training`: set to `False` to only preprocess the data. No training will be done. 
     - `model.data.val_size` and `model.data.test_size`: specify the size of the validation and test datasets.
-    - `model.data.uf50_datapath`: specify the path to the uniref50 fasta file.
-    - `model.data.uf90_datapath`: specify the path to the uniref90 fasta file.
-    - `model.data.cluster_mapping_tsv`: specify the path to the mapping file that maps uniref50 cluster to uniref90 sequences
-    - `model.data.dataset_path`: specify the path to the output directory for the preprocessed uniref50 data. This folder will contain train, val, test splits.
-    - `model.data.uf90.uniref90_path`: specify the path to the output directory for the preprocessed uniref90 data. This folder will only have a folder called `u90_csvs`. It will not have train/test/val splits because uniref90 is only used in trainin. 
-    
+    - `model.data.train.uf50_datapath`: specify the path to the uniref50 fasta file.
+    - `model.data.train.uf90_datapath`: specify the path to the uniref90 fasta file.
+    - `model.data.train.cluster_mapping_tsv`: specify the path to the mapping file that maps uniref50 cluster to uniref90 sequences
+    - `model.data.dataset_path`: specify the path to the output directory for the preprocessed uniref50 and uniref90 data. After propcessing, a folder called `uf50` will be created in this directory. This folder will have train/test/val splits. Each folder will contain `x000.csv` etc. Another folder called `uf90` will also be created in this directory. This folder will have a folder called `uf90_csvs`. Inside the `uf90_csvs` folder, there will be `x000.csv` etc. There will be no train/test/val splits, because uniref90 is only used in training.
+
      You can also make changes directly to the YAML file, as opposed to overwritting hte arguments through command line like above. 
 
-3. When completed, you can find the preprocessed data in `/workspace/bionemo/examples/tests/test_data/`
+3. When completed, you can find the preprocessed data here: 
+
 ![esm2-pretrain-preprocess]({{"/assets/images/esm2-pretrain-preprocess.jpg" | prepend: site.baseurl }})
 
 ### Step 2: Train
@@ -85,8 +83,7 @@ then
   --config-name=pretrain_esm2_650M \
   ++do_training=True \
   ++do_testing=False \
-  ++model.data.dataset_path=examples/tests/test_data/uf50 \
-  ++model.data.uf90.uniref90_path=examples/tests/test_data/uf90 \
+  ++model.data.dataset_path=examples/tests/test_data/uniref202104_esm2_qc_test200_val200 \
   ++trainer.devices=4 \
   ++model.tensor_model_parallel_size=2 \
   ++model.micro_batch_size=8 \
@@ -100,8 +97,7 @@ then
     **Parameters**: 
     - `do_training`: set to `True` to train the model. This assumes that the data has been preprocessed.
     - `do_testing`: set to `False` to skip testing.
-    - `model.data.dataset_path`: specify the path to the preprocessed uniref50 data folder containing train/val/test split. 
-    - `model.data.uf90.uniref90_path`: specify the path to the preprocessed uniref90 data. Note this folder should contain another folder called `u90_csvs`. Inside the `u90_csvs` folder, there should be `x000.csv` to `x049.csv` files.
+    - `model.data.dataset_path`: specify the path to the preprocessed data.
     - `trainer.devices`: specify the number of GPUs to use.
     - `model.tensor_model_parallel_size`: set the tensor model parallel size.
     - `model.micro_batch_size`: set the batch size. Increase this as much as you can without memory errors.
@@ -112,7 +108,7 @@ then
     - `model.dwnstr_task_validation.enabled`: set to `True` to enable validation-in-the-loop. This is an optional quality control step. By default, we use the FLIP dataset for 3state structure prediction as validation task. 
     - `model.dwnstr_task_validation.dataset.dataset_path`: specify the path to the downstream task dataset. By default this will be downloaded during the preprocessing pipeline.
     
-    **Warning**: 
+    **Note**: 
     - By default, the model will process `x000.csv` to `x049.csv` in the `train`, `val`, `test` folders. If this is not the case, you can specify a single CSV file or a custom range of CSV files in `examples/protein/esm2nv/conf/pretrain_esm2_650M.yaml`. Find `model.data.dataset` on this line: 
     ![esm2-pretrain-yaml-dataset]({{"/assets/images/esm2-pretrain-yaml-dataset.jpg" | prepend: site.baseurl }})
     - Similarly, by default the model will process `x000.csv` to `x049.csv` in the `examples/tests/test_data/uf90/u90_csvs` folder. If this is not the case, you can specify a single CSV file or a custom range of CSV files in `examples/protein/esm2nv/conf/pretrain_esm2_650M.yaml`. Find `model.data.uf90.uf90_csvs` on this line:
