@@ -30,7 +30,7 @@ A valid ACE is required to run compute on NGC. Please contact NVIDIA team for NG
      --team internal-sandbox \
      --ace sa-nvex-iad2-ace \
      --instance dgxa100.80g.1.norm \
-     --image nvcr.io/nvidia/clara/bionemo-framework:1.4 \
+     --image nvcr.io/nvidia/clara/bionemo-framework:1.5 \
      --port 8888 \
      --workspace xyu-workspace1:/workspace/bionemo/xyu-workspace1:RW \
      --result /result \
@@ -63,7 +63,7 @@ python download_models.py all --source ngc --download_dir ${BIONEMO_HOME}/models
 This will download models to `/workspace/bionemo/models` folder.
 5. Optionally, persist the models by copying them to your workspace
 ```shell
-cp -r models xyu-workspace1/bionemo/models
+mkdir -p xyu-workspace1/bionemo && cp -r models xyu-workspace1/bionemo/models
 ```
 6. The final directory structure should look like this:
 ![ngc-jupyterlab]({{ "/assets/images/ngc-jupyterlab.jpg" | prepend: site.baseurl }})

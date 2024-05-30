@@ -74,7 +74,7 @@ ngc config set
    8. `ace`: Enter the `ace` and press `Enter`
 9. Pull the BioNeMo container image from NGC. 
 ```shell
-docker pull nvcr.io/nvidia/clara/bionemo-framework:1.4
+docker pull nvcr.io/nvidia/clara/bionemo-framework:1.5
 ```
 
 ### Step 4. Run the BioNeMo container
@@ -87,7 +87,7 @@ docker pull nvcr.io/nvidia/clara/bionemo-framework:1.4
 > Instead of creating a local folder on EBS, you can also mount [EFS](https://aws.amazon.com/efs/) or [Lustre](https://aws.amazon.com/fsx/lustre/) folders to share across EC2 instances
 2. Start the container. Replace `xyu-workspace1` with your workspace name. 
 ```shell
-docker run --rm -d --gpus all -p 8888:8888 -v /home/ubuntu/xyu-workspace1:/workspace/bionemo/xyu-workspace1 nvcr.io/nvidia/clara/bionemo-framework:1.4 "jupyter lab --allow-root --ip=* --port=8888 --no-browser --NotebookApp.token='' --NotebookApp.allow_origin='*' --ContentsManager.allow_hidden=True --notebook-dir=/workspace/bionemo"
+docker run --rm -d --gpus all -p 8888:8888 -v /home/ubuntu/xyu-workspace1:/workspace/bionemo/xyu-workspace1 nvcr.io/nvidia/clara/bionemo-framework:1.5 "jupyter lab --allow-root --ip=* --port=8888 --no-browser --NotebookApp.token='' --NotebookApp.allow_origin='*' --ContentsManager.allow_hidden=True --notebook-dir=/workspace/bionemo"
 ```
    - The `/workspace/bionemo` is the directory inside the container that contains the example and code. I prefer to use it as my home directory when working inside the container. Mount your local folders to this directory by changing the path in `-v` tag. 
 3. You can now access JupyterLab by visitn `localhost:8888` in your web browser.
@@ -101,7 +101,7 @@ python download_models.py all --source ngc --download_dir ${BIONEMO_HOME}/models
 This will create download the models to `/workspace/bionemo/models` folder. 
 6. Optionally, persist the models by copying them to your workspace
 ```shell
-cp -r models xyu-workspace1/bionemo/models
+mkdir -p xyu-workspace1/bionemo && cp -r models xyu-workspace1/bionemo/models
 ```
 Next time, when you launch the container, you can mount the `models` folder to the container under the `/workspace/bionemo` directory.
 7. The final directory structure should look like this:
