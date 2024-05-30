@@ -55,6 +55,8 @@ Complete [Step 1 in BioNeMo Framework]({{ "/docs/framework/1_launch_container" |
 	```bash
 	curl -o /workspace/bionemo/examples/protein/esm1nv/pretrain_oas.py https://raw.githubusercontent.com/xinyu-dev/bionemo-demo/main/scripts/pretrain_esm1nv_oas/pretrain_oas.py
 	```
+
+
 ### Step 5. Run preprocessing
 Run the python file
 ```shell
@@ -68,6 +70,7 @@ The data will be downloaded and split into train/val/test in `/workspace/bionemo
 
 The clean file looks like this
 ![oas-clean]({{ "/assets/images/oas_vh_clean.png" | prepend: site.baseurl }})
+
 
 ### Step 6. Run training
 1. In `pretrain_oas.yaml` file, set `do_training: True` activate training mode. Make sure the dataset path, train, test, val file path, and data_col is properly set
