@@ -5,7 +5,7 @@ restore_from_path: null # used when starting from a .nemo file
 name: esm1nv-oas # Add OAS to the name
 do_training: True # Set to False for preprocessing or True for training
 exp_manager:
-  create_wandb_logger: False # Disable Weights and Biases logger for demo
+  create_wandb_logger: True # enable Weights and Biases logger. You will need to create a wandb account and have API key ready. 
 
 trainer:
   devices: 1 # number of GPUs or CPUs
