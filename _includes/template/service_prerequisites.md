@@ -1,1 +1,1 @@
-A valid NGC API key that has access to BioNeMo service. 
+This method uses the legacy BioNeMo service, because NIM is not available yet.  A valid NGC API key that has access to BioNeMo service. 

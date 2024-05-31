@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ESM1
-parent: Recipes
+title: MegaMolBART
+nav_order: 5
 has_children: true
 ---

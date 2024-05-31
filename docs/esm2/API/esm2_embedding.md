@@ -1,8 +1,9 @@
 ---
 layout: default
-title: ESM2nv Inference
+title: 1. Inference
 nav_order: 1
-parent: BioNeMo API
+parent: 5. NIM
+grand_parent: ESM2
 ---
 # ESM2nv Inference
 
@@ -14,6 +15,8 @@ parent: BioNeMo API
 
 
 ## Prerequisites
+
+{: .highlight }
 {% include template/service_prerequisites.md %}
 
 ## Steps

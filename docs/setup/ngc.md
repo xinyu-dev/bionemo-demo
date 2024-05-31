@@ -1,9 +1,8 @@
 ---
 layout: default
 title: Method 1. On NGC
-nav_order: 2
-parent: Step 1. Launch container
-grand_parent: BioNeMo Framework
+nav_order: 1
+parent: Setup BioNeMo Framework
 ---
 
 # Launch container on NGC

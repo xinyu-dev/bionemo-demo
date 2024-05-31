@@ -1,9 +1,8 @@
 ---
 layout: default
-title: ESM2nv Finetuning
-nav_order: 4
-parent: Step 3. Finetune
-grand_parent: BioNeMo Framework
+title: 2. Finetune
+nav_order: 2
+parent: ESM2
 ---
 
 # Finetuning ESM2
@@ -15,13 +14,13 @@ grand_parent: BioNeMo Framework
 1. TOC
 {:toc}
 
+## Prerequisites
+
+{: .note }
+{% include template/prerequisite_setup.md %}. You will also need pretrained model checkpoint `.nemo` file. You can either use the pretrained models we provided or train your own.  
 
 {: .note }
 This demo will show how to finetune a pretrained ESM2 model on a downstream task using the FLIP dataset. In this process, the ESM2 model's weights are frozen, and only the regressor/classifier head are trained on the downstream task.
-
-## Prerequisites
-1. Complete Step 1. Make sure you have Jupyter notebook launched. 
-2. Have a pretrained model checkpoint `.nemo` file. You can either use the pretrained models we provide in Step 1, or use your own trained model from Step 2. 
 
 {: .highlight }
 {% include template/downstream_multihead_warning.md %}

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BioNeMo Framework
-nav_order: 2
+title: ESM2
+nav_order: 4
 has_children: true
 ---

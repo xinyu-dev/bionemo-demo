@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Pretrain ESM2nv
-nav_order: 4
-parent: Step 2. Pretrain
-grand_parent: BioNeMo Framework
+title: 1. Pretrain with Uniref
+nav_order: 1
+parent: ESM2
 ---
 
 # Pretraining the ESM2nv protein language model
@@ -16,12 +15,10 @@ grand_parent: BioNeMo Framework
 {:toc}
 
 
-{: .note }
-{% include template/protein_mlm_objective.md %}
-
 ## Prerequisites
-Completes Step 1. Make sure you have Jupyter notebook launched. 
 
+{: .note }
+{% include template/prerequisite_setup.md %}
 
 ## Steps
 ### Step 1: Preprocess training data using pre-built pipeline

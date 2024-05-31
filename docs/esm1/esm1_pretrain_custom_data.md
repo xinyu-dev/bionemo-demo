@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Pretrain ESM1nv with custom data
-nav_order: 3
+title: 1a. Pretrain with Custom Data
+nav_order: 1
 parent: ESM1
-grand_parent: Recipes
 ---
 
 # Pretraining ESM1nv with custom data
@@ -16,12 +15,10 @@ grand_parent: Recipes
 {:toc}
 
 
-{: .note }
-{% include template/protein_mlm_objective.md %}
-
 ## Prerequisites
-Complete Step 1. Make sure you have Jupyter notebook launched. 
 
+{: .note }
+{% include template/prerequisite_setup.md %}. 
 
 ## Step 1. Prepare clean training data
 

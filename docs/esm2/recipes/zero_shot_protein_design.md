@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Zero-shot Protein Design
-parent: ESM2
-grand_parent: Recipes
+title: 1. Zero-shot Mutant Design
+parent: 4. Recipes
+grand_parent: ESM2
+nav_order: 1
 ---
-# Zero-shot Protein Design
+# Zero-shot Mutant Design
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -14,6 +15,8 @@ grand_parent: Recipes
 
 
 ## Prerequisites
+
+{: .highlight }
 {% include template/service_prerequisites.md %}
 
 ## Background

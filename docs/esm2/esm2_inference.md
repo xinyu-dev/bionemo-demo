@@ -1,9 +1,8 @@
 ---
 layout: default
-title: ESM2nv Inference
-nav_order: 1
-parent: Step 4. Inference
-grand_parent: BioNeMo Framework
+title: 3. Inference
+nav_order: 3
+parent: ESM2
 ---
 
 # ESM2nv Inference
@@ -21,8 +20,9 @@ grand_parent: BioNeMo Framework
 
 
 ## Prerequisites
-1. Complete Step 1. Make sure you have Jupyter notebook launched. 
-2. Have a pretrained model checkpoint `.nemo` file. You can either use the pretrained models we provide in Step 1, or use your own trained model from Step 2. 
+
+{: .note }
+{% include template/prerequisite_setup.md %}. You will also need pretrained model checkpoint `.nemo` file. You can either use the pretrained models we provided or train your own. 
 
 
 ## Steps

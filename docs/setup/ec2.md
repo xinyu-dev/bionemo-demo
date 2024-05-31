@@ -2,8 +2,7 @@
 layout: default
 title: Method 2. On EC2
 nav_order: 2
-parent: Step 1. Launch container
-grand_parent: BioNeMo Framework
+parent: Setup BioNeMo Framework
 ---
 
 # Launch container on AWS EC2

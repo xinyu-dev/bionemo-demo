@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Pretrain ESM1nv with OAS
+title: 1b. Pretrain with OAS
+nav_order: 2
 parent: ESM1
-grand_parent: Recipes
 ---
 # Pretraining ESM1nv on OAS
 
@@ -13,12 +13,16 @@ grand_parent: Recipes
 {:toc}
 
 
-{: .note }
-We will use the paired sequence from OAS dataset (~ 2 M) to train a ESM1nv model on VH. Similar steps can be applied to VL. 
 
 
 ## Prerequisites
-Complete [Step 1 in BioNeMo Framework]({{ "/docs/framework/1_launch_container" | prepend: site.baseurl }})
+
+{: .note }
+{% include template/prerequisite_setup.md %}. 
+
+{: .note }
+We will use the paired sequence from OAS dataset (~ 2 M) to train a ESM1nv model on VH. Similar steps can be applied to VL. 
+
 
 ## Steps
 

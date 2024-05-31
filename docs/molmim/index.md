@@ -1,6 +1,6 @@
 ---
 layout: default
-title: BioNeMo API
-nav_order: 3
+title: MolMIM
+nav_order: 6
 has_children: true
 ---
