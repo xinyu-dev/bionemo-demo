@@ -158,7 +158,7 @@ sudo mount -t nfs4 -o nfsvers=...,rsize=...,wsize=...,hard,timeo=...,retrans=...
 
 
 {: .warning }
-> [Singualrity CE containers](https://docs.sylabs.io/guides/main/user-guide/singularity_and_docker.html#read-only-by-default) are read-only by default. You can either use overlay to make the container writable (changes will be lost after the container is destroyed), or you can mount a writable directory to it. The exmaple below mounts `/home/ubuntu/xyu-workspace1` to the container. 
+> [Singualrity CE containers](https://docs.sylabs.io/guides/main/user-guide/singularity_and_docker.html#read-only-by-default) are read-only by default. You can use overlay to make the container writable (changes will be lost after the container is destroyed). Any changes you wish to persist can be stored on a separate volume mounted to the container. The example below mounts `/home/ubuntu/xyu-workspace1` to the container. 
 
 
 1. Mount EFS volume to `/home/ubuntu/xyu-workspace1`
