@@ -199,8 +199,8 @@ This will create download the models to `/workspace/bionemo/models` folder.
 mkdir -p xyu-workspace1/bionemo && cp -r models xyu-workspace1/bionemo/models
 ```
 
-### Optional Step 6: Run singularity container (with mounted model weights)
-If model weights are persisted in the EFS volume, you can mount the model weights to the container and run the container. 
+### Optional: Run singularity container (with mounted model weights)
+If model weights have already been downloaded to the EFS volume, you can mount the model weights to the container and run the container. 
 
 ```bash
 singularity run \
