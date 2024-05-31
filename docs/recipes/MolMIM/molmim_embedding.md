@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Generate Embeddings with MolMIM
+title: Generate Embeddings
 parent: MolMIM
 grand_parent: Recipes
 ---

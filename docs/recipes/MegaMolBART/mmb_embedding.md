@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Generate Embeddings with MegaMolBART
+title: Generate Embeddings
 parent: MegaMolBART
 grand_parent: Recipes
 ---
