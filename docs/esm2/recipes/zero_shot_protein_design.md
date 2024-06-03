@@ -5,6 +5,9 @@ parent: 4. Recipes
 grand_parent: ESM2
 nav_order: 1
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 # Zero-shot Mutant Design
 
 ## Table of contents

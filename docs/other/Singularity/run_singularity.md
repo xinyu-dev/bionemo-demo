@@ -5,6 +5,9 @@ nav_order: 1
 parent: Singularity
 grand_parent: Other Adaptations
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 
 # Running BioNeMo Framework as Singularity Container
 

@@ -5,6 +5,9 @@ nav_order: 1
 parent: 5. NIM
 grand_parent: ESM2
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 # ESM2nv Inference
 
 ## Table of contents

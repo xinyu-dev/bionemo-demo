@@ -5,6 +5,10 @@ nav_order: 2
 parent: Setup BioNeMo Framework
 ---
 
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
+
 # Launch container on AWS EC2
 
 

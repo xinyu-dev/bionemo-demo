@@ -4,6 +4,9 @@ title: 1a. Pretrain with Custom Data
 nav_order: 1
 parent: ESM1
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 
 # Pretraining ESM1nv with custom data
 

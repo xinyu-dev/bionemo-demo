@@ -4,6 +4,8 @@ title: Method 1. On NGC
 nav_order: 1
 parent: Setup BioNeMo Framework
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
 
 # Launch container on NGC
 

@@ -3,6 +3,9 @@ layout: default
 title: 1. Inference
 parent: MolMIM
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 # Generate Embeddings using MolMIM
 
 ## Table of contents

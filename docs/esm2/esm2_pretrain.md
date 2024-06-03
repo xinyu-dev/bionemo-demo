@@ -4,6 +4,9 @@ title: 1. Pretrain with Uniref
 nav_order: 1
 parent: ESM2
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 
 # Pretraining the ESM2nv protein language model
 

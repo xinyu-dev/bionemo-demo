@@ -3,14 +3,15 @@ title: Home
 layout: home
 nav_order: 1
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 # BioNeMo Demo
 
 This site contains my demo workflows and tips for using BioNeMo framework and API. 
 
-## Get started
-1. [BioNeMo framework demo](./docs/framework)
-2. [BioNeMo API demo](./docs/api)
-
+## Models
+Check the left side bar 
 
 ## Resources
 For complete documentations, refer to:

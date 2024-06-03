@@ -4,6 +4,9 @@ title: 1b. Pretrain with OAS
 nav_order: 2
 parent: ESM1
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
+
 # Pretraining ESM1nv on OAS
 
 ## Table of contents

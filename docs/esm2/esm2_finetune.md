@@ -4,6 +4,8 @@ title: 2. Finetune
 nav_order: 2
 parent: ESM2
 ---
+{: .warning}
+This site has been deprecated. Please visit the new [demo GitBook site](https://xinyu-dev.gitbook.io/bionemo-gitbook). 
 
 # Finetuning ESM2
 
